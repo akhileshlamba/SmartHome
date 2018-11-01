@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3CB7DD628B8BFD7A108ECDC /* Pods_SmartHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DEAF94A9D89B654EBD4A21 /* Pods_SmartHome.framework */; };
+		E60FE1BF21898E2E00991666 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60FE1BE21898E2E00991666 /* AuthViewController.swift */; };
+		E64F18CF217E0AEA0082726A /* DefaultCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64F18CE217E0AEA0082726A /* DefaultCells.swift */; };
+		E64F18D1217E53840082726A /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64F18D0217E53840082726A /* HomeCollectionViewController.swift */; };
+		E664FB522189D59D00158BE6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E664FB512189D59D00158BE6 /* GoogleService-Info.plist */; };
+		E664FB542189DCD200158BE6 /* OutsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E664FB532189DCD200158BE6 /* OutsideViewController.swift */; };
 		E6655877216778BA00D66C08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6655876216778BA00D66C08 /* AppDelegate.swift */; };
 		E6655879216778BA00D66C08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6655878216778BA00D66C08 /* ViewController.swift */; };
 		E665587C216778BA00D66C08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E665587A216778BA00D66C08 /* Main.storyboard */; };
@@ -15,6 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		265EEA02E61D9B68CE45C2D4 /* Pods-SmartHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHome/Pods-SmartHome.debug.xcconfig"; sourceTree = "<group>"; };
+		3AA7E4A9CB11FB2E18F2B5A5 /* Pods-SmartHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHome.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHome/Pods-SmartHome.release.xcconfig"; sourceTree = "<group>"; };
+		97DEAF94A9D89B654EBD4A21 /* Pods_SmartHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E60FE1BE21898E2E00991666 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		E64F18CE217E0AEA0082726A /* DefaultCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCells.swift; sourceTree = "<group>"; };
+		E64F18D0217E53840082726A /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
+		E664FB512189D59D00158BE6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E664FB532189DCD200158BE6 /* OutsideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutsideViewController.swift; sourceTree = "<group>"; };
 		E6655873216778BA00D66C08 /* SmartHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6655876216778BA00D66C08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6655878216778BA00D66C08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3CB7DD628B8BFD7A108ECDC /* Pods_SmartHome.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		654940C7EB77B7B30AE7DDEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97DEAF94A9D89B654EBD4A21 /* Pods_SmartHome.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		894138E6E3361879621BF19B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				265EEA02E61D9B68CE45C2D4 /* Pods-SmartHome.debug.xcconfig */,
+				3AA7E4A9CB11FB2E18F2B5A5 /* Pods-SmartHome.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E665586A216778BA00D66C08 = {
 			isa = PBXGroup;
 			children = (
 				E6655875216778BA00D66C08 /* SmartHome */,
 				E6655874216778BA00D66C08 /* Products */,
+				894138E6E3361879621BF19B /* Pods */,
+				654940C7EB77B7B30AE7DDEF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,10 +90,15 @@
 			children = (
 				E6655876216778BA00D66C08 /* AppDelegate.swift */,
 				E6655878216778BA00D66C08 /* ViewController.swift */,
+				E664FB512189D59D00158BE6 /* GoogleService-Info.plist */,
 				E665587A216778BA00D66C08 /* Main.storyboard */,
 				E665587D216778BA00D66C08 /* Assets.xcassets */,
 				E665587F216778BA00D66C08 /* LaunchScreen.storyboard */,
 				E6655882216778BA00D66C08 /* Info.plist */,
+				E64F18CE217E0AEA0082726A /* DefaultCells.swift */,
+				E64F18D0217E53840082726A /* HomeCollectionViewController.swift */,
+				E60FE1BE21898E2E00991666 /* AuthViewController.swift */,
+				E664FB532189DCD200158BE6 /* OutsideViewController.swift */,
 			);
 			path = SmartHome;
 			sourceTree = "<group>";
@@ -71,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6655885216778BA00D66C08 /* Build configuration list for PBXNativeTarget "SmartHome" */;
 			buildPhases = (
+				0316E5729FAFBE197C74427B /* [CP] Check Pods Manifest.lock */,
 				E665586F216778BA00D66C08 /* Sources */,
 				E6655870216778BA00D66C08 /* Frameworks */,
 				E6655871216778BA00D66C08 /* Resources */,
+				0CCDE60FC576F3DEB7A3EBFC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,10 +167,58 @@
 				E6655881216778BA00D66C08 /* LaunchScreen.storyboard in Resources */,
 				E665587E216778BA00D66C08 /* Assets.xcassets in Resources */,
 				E665587C216778BA00D66C08 /* Main.storyboard in Resources */,
+				E664FB522189D59D00158BE6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0316E5729FAFBE197C74427B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartHome-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0CCDE60FC576F3DEB7A3EBFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SmartHome/Pods-SmartHome-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartHome/Pods-SmartHome-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E665586F216778BA00D66C08 /* Sources */ = {
@@ -137,6 +226,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6655879216778BA00D66C08 /* ViewController.swift in Sources */,
+				E64F18D1217E53840082726A /* HomeCollectionViewController.swift in Sources */,
+				E664FB542189DCD200158BE6 /* OutsideViewController.swift in Sources */,
+				E60FE1BF21898E2E00991666 /* AuthViewController.swift in Sources */,
+				E64F18CF217E0AEA0082726A /* DefaultCells.swift in Sources */,
 				E6655877216778BA00D66C08 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +365,7 @@
 		};
 		E6655886216778BA00D66C08 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 265EEA02E61D9B68CE45C2D4 /* Pods-SmartHome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +381,7 @@
 		};
 		E6655887216778BA00D66C08 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AA7E4A9CB11FB2E18F2B5A5 /* Pods-SmartHome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
