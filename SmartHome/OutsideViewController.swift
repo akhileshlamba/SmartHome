@@ -16,12 +16,11 @@ class OutsideViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewWillAppear(_ animated: Bool) {
-        weather()
+        request(url: "http://192.168.1.11:3000/capture")
     }
     
-    func weather() {
-        let url = URL(string:
-            "http://192.168.1.11:3000/capture")!
+    func request(url: String) {
+        let url = URL(string: url)!
         let task = URLSession.shared.dataTask(with: url) { data, response,
             error in
             if(error != nil) {
@@ -47,7 +46,17 @@ class OutsideViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func deny(_ sender: Any) {
+        request(url: "http://192.168.1.11:3000/off")
+        //self.navigationController?.popToRootViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func approve(_ sender: Any) {
+        request(url: "http://192.168.1.11:3000/on")
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

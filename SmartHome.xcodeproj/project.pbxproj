@@ -18,6 +18,9 @@
 		E665587C216778BA00D66C08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E665587A216778BA00D66C08 /* Main.storyboard */; };
 		E665587E216778BA00D66C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E665587D216778BA00D66C08 /* Assets.xcassets */; };
 		E6655881216778BA00D66C08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E665587F216778BA00D66C08 /* LaunchScreen.storyboard */; };
+		E6F73EDD218B47E40006CE26 /* LineChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F73EDC218B47E40006CE26 /* LineChartViewController.swift */; };
+		E6F73EDF218C45730006CE26 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F73EDE218C45730006CE26 /* Util.swift */; };
+		E6F7D9CB218B1468008BE0C7 /* AppliancesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F7D9CA218B1468008BE0C7 /* AppliancesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		E665587D216778BA00D66C08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6655880216778BA00D66C08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6655882216778BA00D66C08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6F73EDC218B47E40006CE26 /* LineChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartViewController.swift; sourceTree = "<group>"; };
+		E6F73EDE218C45730006CE26 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		E6F7D9CA218B1468008BE0C7 /* AppliancesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppliancesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 				E64F18D0217E53840082726A /* HomeCollectionViewController.swift */,
 				E60FE1BE21898E2E00991666 /* AuthViewController.swift */,
 				E664FB532189DCD200158BE6 /* OutsideViewController.swift */,
+				E6F7D9CA218B1468008BE0C7 /* AppliancesViewController.swift */,
+				E6F73EDC218B47E40006CE26 /* LineChartViewController.swift */,
+				E6F73EDE218C45730006CE26 /* Util.swift */,
 			);
 			path = SmartHome;
 			sourceTree = "<group>";
@@ -225,6 +234,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6F7D9CB218B1468008BE0C7 /* AppliancesViewController.swift in Sources */,
+				E6F73EDF218C45730006CE26 /* Util.swift in Sources */,
+				E6F73EDD218B47E40006CE26 /* LineChartViewController.swift in Sources */,
 				E6655879216778BA00D66C08 /* ViewController.swift in Sources */,
 				E64F18D1217E53840082726A /* HomeCollectionViewController.swift in Sources */,
 				E664FB542189DCD200158BE6 /* OutsideViewController.swift in Sources */,

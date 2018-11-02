@@ -14,6 +14,9 @@ class HomeCollectionViewController: UICollectionViewController {
 
     var icons = NSMutableArray()
     var labels = NSMutableArray()
+    var ac = false
+    var heater = false
+    var lights = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +35,12 @@ class HomeCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        ac = false
+        heater = false
+        lights = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,11 +85,26 @@ class HomeCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let name = labels[indexPath.row] as! String
         if name == "camera" {
-            let viewController = storyboard?.instantiateViewController(withIdentifier: "camera")
-            self.navigationController?.pushViewController(viewController!, animated: true)
-        } else {
-            let viewController = storyboard?.instantiateViewController(withIdentifier: "appliances")
-            self.navigationController?.pushViewController(viewController!, animated: true)
+//            let viewController = storyboard?.instantiateViewController(withIdentifier: "camera")
+//            self.navigationController?.pushViewController(viewController!, animated: true)
+            self.performSegue(withIdentifier: "outside", sender: nil)
+        } else if name == "Air Conditioner"{
+//            let viewController = storyboard?.instantiateViewController(withIdentifier: "appliances")
+//            self.navigationController?.pushViewController(viewController!, animated: true)
+            ac = true
+            self.performSegue(withIdentifier: "appliances", sender: nil)
+        }
+        else if name == "Heater"{
+//            let viewController = storyboard?.instantiateViewController(withIdentifier: "appliances")
+//            self.navigationController?.pushViewController(viewController!, animated: true)
+            heater = true
+            self.performSegue(withIdentifier: "appliances", sender: nil)
+        }
+        else if name == "Lights"{
+//            let viewController = storyboard?.instantiateViewController(withIdentifier: "appliances")
+//            self.navigationController?.pushViewController(viewController!, animated: true)
+            lights = true
+            self.performSegue(withIdentifier: "appliances", sender: nil)
         }
     }
 
@@ -115,4 +139,32 @@ class HomeCollectionViewController: UICollectionViewController {
     }
     */
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "appliances" && ac{
+            print("Inside segue")
+            
+            let barViewControllers = segue.destination as! UITabBarController
+            if let destViewController = barViewControllers.childViewControllers.first as? AppliancesViewController{
+                print("Inside segue AC")
+                destViewController.applianceName = "ac"
+            }
+            
+        }
+        else if segue.identifier == "appliances" && heater{
+            let barViewControllers = segue.destination as! UITabBarController
+            if let destViewController = barViewControllers.childViewControllers.first as? AppliancesViewController{
+                print("Inside segue heater")
+                destViewController.applianceName = "heater"
+            }
+        }
+        else if segue.identifier == "appliances" && lights{
+            let barViewControllers = segue.destination as! UITabBarController
+            if let destViewController = barViewControllers.childViewControllers.first as? AppliancesViewController{
+                print("Inside segue lights")
+                destViewController.applianceName = "lights"
+            }
+        }
+        
+    }
+    
 }
