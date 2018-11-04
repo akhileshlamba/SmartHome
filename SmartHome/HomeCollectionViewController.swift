@@ -13,6 +13,7 @@ private let reuseIdentifier = "DefaultCell"
 
 class HomeCollectionViewController: UICollectionViewController {
 
+    // Default cells to display on the home screen. Images and icons will represent each cell of Collection view.
     var icons = NSMutableArray()
     var labels = NSMutableArray()
     var ac = false
@@ -77,8 +78,24 @@ class HomeCollectionViewController: UICollectionViewController {
         return icons.count
     }
 
+    //
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! DefaultCells
+        
+        // This will create card style cells. That is it will round the edges of cell and will provide shadow to the
+        // edge of the cell.
+        // Reference:- https://github.com/rileydnorris/cardLayoutSwift
+        cell.contentView.layer.cornerRadius = 4.0
+        cell.contentView.layer.borderWidth = 1.0
+        cell.contentView.layer.borderColor = UIColor.clear.cgColor
+        cell.contentView.layer.masksToBounds = false
+        cell.layer.shadowColor = UIColor.gray.cgColor
+        cell.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+        cell.layer.shadowRadius = 4.0
+        cell.layer.shadowOpacity = 1.0
+        cell.layer.masksToBounds = false
+        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+
         
         cell.imageView.image = UIImage(named: icons[indexPath.row] as! String)
         cell.textLabel.text = labels[indexPath.row] as? String

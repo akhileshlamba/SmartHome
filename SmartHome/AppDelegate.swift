@@ -13,10 +13,12 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        // Userdefault is being set so that once the setting for appliances like heater and AC have been set, it will
+        // remain same everytime.
         let defaults = UserDefaults.standard
         if defaults.string(forKey: "Set") == nil{
             defaults.set(20, forKey: "airConditionLowerTemp")

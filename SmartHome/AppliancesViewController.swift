@@ -27,14 +27,14 @@ class AppliancesViewController: UIViewController {
         switch applianceName {
         case "ac"?:
             imageView.image = UIImage(named:"air_conditioner")
-            request(url: "http://192.168.1.16:3000/currentTemperature", type: "ac")
+            request(url: "http://192.168.1.20:3000/currentTemperature", type: "ac")
             break
         case "heater"?:
             imageView.image = UIImage(named: "heater")
-            request(url: "http://192.168.1.16:3000/currentTemperature", type: "heater")
+            request(url: "http://192.168.1.20:3000/currentTemperature", type: "heater")
         case "lights"?:
             imageView.image = UIImage(named: "bulbOn")
-            request(url: "http://192.168.1.16:3000/light", type: "light")
+            request(url: "http://192.168.1.20:3000/light", type: "light")
         default:
             print("appliance name: \(String(describing: applianceName))")
             print("Not a valid selection")
@@ -73,13 +73,13 @@ class AppliancesViewController: UIViewController {
                     case "ac":
                         self.textLabel.text = "Current Temperature is :\(temperature)"
                         if Int(temperature) > UserDefaults.standard.integer(forKey: "airConditionLowerTemp"){
-                            self.switchOnOff(url: "http://192.168.1.16:3000/switchon?id=ac",type: "ac")
+                            self.switchOnOff(url: "http://192.168.1.20:3000/switchon?id=ac",type: "ac")
                             self.button.setTitle("Switch Off", for: UIControlState.normal)
                         }
                     case "heater":
                         self.textLabel.text = "Current Temperature is :\(temperature)"
                         if Int(temperature) < UserDefaults.standard.integer(forKey: "heaterUpperTemp"){
-                            self.switchOnOff(url: "http://192.168.1.16:3000/switchon?id=heater",type: "heater")
+                            self.switchOnOff(url: "http://192.168.1.20:3000/switchon?id=heater",type: "heater")
                             self.button.setTitle("Switch Off", for: UIControlState.normal)
                         }
                     case "light":
@@ -117,31 +117,31 @@ class AppliancesViewController: UIViewController {
     @IBAction func on_off(_ sender: UIButton) {
         if applianceName == "ac"{
             if sender.titleLabel?.text == "Switch On" {
-                switchOnOff(url: "http://192.168.1.16:3000/switchon?id=ac",type: "ac")
+                switchOnOff(url: "http://192.168.1.20:3000/switchon?id=ac",type: "ac")
                 sender.setTitle("Switch Off", for: UIControlState.normal)
             }
             else {
-                switchOnOff(url: "http://192.168.1.16:3000/switchoff?id=ac",type: "ac")
+                switchOnOff(url: "http://192.168.1.20:3000/switchoff?id=ac",type: "ac")
                 sender.setTitle("Switch On", for: UIControlState.normal)
             }
         }
         else if applianceName == "heater"{
             if sender.titleLabel?.text == "Switch On" {
-                switchOnOff(url: "http://192.168.1.16:3000/switchon?id=heater",type: "heater")
+                switchOnOff(url: "http://192.168.1.20:3000/switchon?id=heater",type: "heater")
                 sender.setTitle("Switch Off", for: UIControlState.normal)
             }
             else {
-                switchOnOff(url: "http://192.168.1.16:3000/switchoff?id=heater",type: "heater")
+                switchOnOff(url: "http://192.168.1.20:3000/switchoff?id=heater",type: "heater")
                 sender.setTitle("Switch On", for: UIControlState.normal)
             }
         }
         else if applianceName == "lights"{
             if sender.titleLabel?.text == "Switch On" {
-                switchOnOff(url: "http://192.168.1.16:3000/switchon?id=lights",type: "lights")
+                switchOnOff(url: "http://192.168.1.20:3000/switchon?id=lights",type: "lights")
                 sender.setTitle("Switch Off", for: UIControlState.normal)
             }
             else {
-                switchOnOff(url: "http://192.168.1.16:3000/switchoff?id=lights",type: "lights")
+                switchOnOff(url: "http://192.168.1.20:3000/switchoff?id=lights",type: "lights")
                 sender.setTitle("Switch On", for: UIControlState.normal)
             }
         }
