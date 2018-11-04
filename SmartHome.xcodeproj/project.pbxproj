@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B24F8621218E40240052372A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24F8620218E40240052372A /* SettingsViewController.swift */; };
+		B24F8623218E40360052372A /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24F8622218E40360052372A /* AboutUsViewController.swift */; };
 		C3CB7DD628B8BFD7A108ECDC /* Pods_SmartHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DEAF94A9D89B654EBD4A21 /* Pods_SmartHome.framework */; };
 		E60FE1BF21898E2E00991666 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60FE1BE21898E2E00991666 /* AuthViewController.swift */; };
 		E64F18CF217E0AEA0082726A /* DefaultCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64F18CE217E0AEA0082726A /* DefaultCells.swift */; };
@@ -27,6 +29,8 @@
 		265EEA02E61D9B68CE45C2D4 /* Pods-SmartHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHome/Pods-SmartHome.debug.xcconfig"; sourceTree = "<group>"; };
 		3AA7E4A9CB11FB2E18F2B5A5 /* Pods-SmartHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHome.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHome/Pods-SmartHome.release.xcconfig"; sourceTree = "<group>"; };
 		97DEAF94A9D89B654EBD4A21 /* Pods_SmartHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B24F8620218E40240052372A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B24F8622218E40360052372A /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		E60FE1BE21898E2E00991666 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		E64F18CE217E0AEA0082726A /* DefaultCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCells.swift; sourceTree = "<group>"; };
 		E64F18D0217E53840082726A /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 				E64F18CE217E0AEA0082726A /* DefaultCells.swift */,
 				E64F18D0217E53840082726A /* HomeCollectionViewController.swift */,
 				E60FE1BE21898E2E00991666 /* AuthViewController.swift */,
+				B24F8620218E40240052372A /* SettingsViewController.swift */,
+				B24F8622218E40360052372A /* AboutUsViewController.swift */,
 				E664FB532189DCD200158BE6 /* OutsideViewController.swift */,
 				E6F7D9CA218B1468008BE0C7 /* AppliancesViewController.swift */,
 				E6F73EDC218B47E40006CE26 /* LineChartViewController.swift */,
@@ -237,11 +243,13 @@
 				E6F7D9CB218B1468008BE0C7 /* AppliancesViewController.swift in Sources */,
 				E6F73EDF218C45730006CE26 /* Util.swift in Sources */,
 				E6F73EDD218B47E40006CE26 /* LineChartViewController.swift in Sources */,
+				B24F8621218E40240052372A /* SettingsViewController.swift in Sources */,
 				E6655879216778BA00D66C08 /* ViewController.swift in Sources */,
 				E64F18D1217E53840082726A /* HomeCollectionViewController.swift in Sources */,
 				E664FB542189DCD200158BE6 /* OutsideViewController.swift in Sources */,
 				E60FE1BF21898E2E00991666 /* AuthViewController.swift in Sources */,
 				E64F18CF217E0AEA0082726A /* DefaultCells.swift in Sources */,
+				B24F8623218E40360052372A /* AboutUsViewController.swift in Sources */,
 				E6655877216778BA00D66C08 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

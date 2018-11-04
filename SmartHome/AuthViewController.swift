@@ -11,14 +11,19 @@ import Firebase
 
 class AuthViewController: UIViewController {
 
+    @IBOutlet weak var SmartHomeIcon: UIImageView!
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     var handle: AuthStateDidChangeListenerHandle?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        SmartHomeIcon.image = UIImage(named: "smartNest")
         handle = Auth.auth().addStateDidChangeListener({ (auth, user) in
             if user != nil{
+                print("Bad")
+                print(user)
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             }
         })
@@ -65,7 +70,7 @@ class AuthViewController: UIViewController {
         }
         
         guard let username = emailTextField.text else {
-            displayErrorMessage("Please Enter a password")
+            displayErrorMessage("Please Enter your Email Id")
             return
         }
         
@@ -73,6 +78,8 @@ class AuthViewController: UIViewController {
             if error != nil{
                 self.displayErrorMessage(error!.localizedDescription)
             }
+            print("Hello")
+            print(user)
         }
     }
     

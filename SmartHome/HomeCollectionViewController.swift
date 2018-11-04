@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 private let reuseIdentifier = "DefaultCell"
 
@@ -25,16 +26,21 @@ class HomeCollectionViewController: UICollectionViewController {
         icons.add("bulbOn")
         icons.add("heater")
         icons.add("house")
+        icons.add("settings")
+        icons.add("Aboutapp")
         
         labels.add("Air Conditioner")
         labels.add("Lights")
         labels.add("Heater")
-        labels.add("camera")
+        labels.add("Door Bell Camera")
+        labels.add("Configuration")
+        labels.add("About App")
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Do any additional setup after loading the view.
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -84,11 +90,13 @@ class HomeCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let name = labels[indexPath.row] as! String
-        if name == "camera" {
+        if name == "Door Bell Camera" {
 //            let viewController = storyboard?.instantiateViewController(withIdentifier: "camera")
 //            self.navigationController?.pushViewController(viewController!, animated: true)
             self.performSegue(withIdentifier: "outside", sender: nil)
-        } else if name == "Air Conditioner"{
+//        } else if name == "Configuration"{
+//            self.performSegue(withIdentifier: "configure", sender: nil)
+        }else if name == "Air Conditioner"{
 //            let viewController = storyboard?.instantiateViewController(withIdentifier: "appliances")
 //            self.navigationController?.pushViewController(viewController!, animated: true)
             ac = true
@@ -106,8 +114,29 @@ class HomeCollectionViewController: UICollectionViewController {
             lights = true
             self.performSegue(withIdentifier: "appliances", sender: nil)
         }
+        else if name == "Configuration"{
+            //            let viewController = storyboard?.instantiateViewController(withIdentifier: "appliances")
+            //            self.navigationController?.pushViewController(viewController!, animated: true)
+            lights = true
+            self.performSegue(withIdentifier: "settings", sender: nil)
+        }
+        else if name == "About App"{
+            //            let viewController = storyboard?.instantiateViewController(withIdentifier: "appliances")
+            //            self.navigationController?.pushViewController(viewController!, animated: true)
+            lights = true
+            self.performSegue(withIdentifier: "about", sender: nil)
+        }
     }
 
+    
+    @IBAction func signOut(_ sender: Any) {
+        do{
+            try Auth.auth().signOut()
+        }catch{}
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     // MARK: UICollectionViewDelegate
 
     /*

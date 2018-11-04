@@ -16,7 +16,7 @@ class OutsideViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewWillAppear(_ animated: Bool) {
-        request(url: "http://192.168.1.11:3000/capture")
+        request(url: "http://192.168.1.16:3000/capture")
     }
     
     func request(url: String) {
@@ -47,13 +47,13 @@ class OutsideViewController: UIViewController {
     }
     
     @IBAction func deny(_ sender: Any) {
-        request(url: "http://192.168.1.11:3000/off")
+        request(url: "http://192.168.1.16:3000/off")
         //self.navigationController?.popToRootViewController(animated: true)
         self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func approve(_ sender: Any) {
-        request(url: "http://192.168.1.11:3000/on")
+        request(url: "http://192.168.1.16:3000/on")
         self.navigationController?.popViewController(animated: true)
     }
     
